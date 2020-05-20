@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+
+
+/* *** START リセットcss *** */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Noto Serif JP';
+	font-weight:200;
+	color:#333;
+	line-height:1.5;
+	}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* *** END リセットcss *** */
+
+/* リセット */
+input, button, textarea, select,a {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  //-webkit-appearance: none;
+  //-moz-appearance: none;
+  //appearance: none;
+  font-family: 'Noto Serif JP';
+  text-decoration: none;
+}
+
+/*clerafix*/
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+	}
+	.cf:after {
+	    clear: both;
+		}
+
+	.cf {
+	    *zoom: 1;
+		}
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// ++++++++++++++top++++++++++++++++++++++
+
+#toppage{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("/backflower.jpeg");
+    }
+    #toppage .top-contents{
+        width: 60vw;
+        margin:  auto;
+        padding:100px;
+        background-color:rgba(0,0,0,.5) ;
+        }
+        .top-contents .menu{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .top-contents a{
+            font-size: 14px;
+            text-align: center;
+            color: #efefef;
+            }
+
+
+h1{
+    color: #efefef;
+    width: 100%;
+    font-size: 48px;
+    font-weight:400;
+    text-align: center;
+    padding: 5px;
+}
+h2{
+    color: orange;
+    width: 100%;
+    font-size: 34px;
+    text-align: center;
+}
+h3{
+    color: skyblue;
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+}
+// ++++++++++++++about++++++++++++++++++++++
+// logo
+#aboutpage .headlogo{
+    padding: 10px;
+    }
+    .headlogo a{
+        font-size:24px;
+        color: skyblue;
+        text-align: left;
+        }
+#aboutpage .about-contents{
+    padding-top:50px;
+    width: 100vw;
+    text-align:center;
+}
+    #aboutpage .about-contents img{
+        // width: 100%;
+        margin:30px auto;
+        }
+        #aboutpage .intraction p{
+            padding: 15px 0;
+            color: #000;
+            font-size: 16px;
+        }
