@@ -108,7 +108,10 @@ input, button, textarea, select,a {
         .top-contents a{
             font-size: 14px;
             text-align: center;
-            color: #efefef;
+            color: #fff;
+            }
+            .top-contents a:hover{
+                color: #efefef;
             }
 
 
@@ -134,7 +137,7 @@ h3{
 }
 // ++++++++++++++about++++++++++++++++++++++
 // logo
-#aboutpage .headlogo{
+.headlogo{
     padding: 10px;
     }
     .headlogo a{

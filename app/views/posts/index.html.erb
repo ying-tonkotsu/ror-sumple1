@@ -1,0 +1,13 @@
+<%# 変数を定義 %>
+<div class="main posts-index">
+    <div class="headlogo">
+        <a href="/">Sumple</a>
+    </div>
+  <div class="container">
+    <% @posts.each do |post| %>
+        <div class="posts-index-item">
+            <%= post %>
+        </div>
+    <% end %>
+  </div>
+</div>
