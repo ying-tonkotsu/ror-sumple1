@@ -15,5 +15,7 @@ class PostsController < ApplicationController
   end
   # 新規投稿を作成
   def create
+    # indexページへ転送
+    redirect_to("/posts/index")
   end
 end

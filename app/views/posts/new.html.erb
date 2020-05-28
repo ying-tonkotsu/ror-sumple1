@@ -2,13 +2,13 @@
   <div class="container">
     <h2 class="form-heading">Tweet</h2>
      <%# form_tagメゾットを用いて、フォームに入力された情報を/posts/create/に送信する %>
-        <%= form_tag("/posts/create") do%>
-        <div class="form">
-            <div class="form-body">
+        <%= form_tag("/posts/create") do %>
+            <div class="form">
+                <div class="form-body">
                 <textarea></textarea>
-                <input type="submit" value="send">
+                <input type="submit" value="投稿">
+                </div>
             </div>
-        </div>
         <% end %>
   </div>
 </div>
