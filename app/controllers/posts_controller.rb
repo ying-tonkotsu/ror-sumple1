@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   # 一覧ページ
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
+    # created_atをもとに新しい順に並び替える
   end
   # 詳細ページ
   def show
