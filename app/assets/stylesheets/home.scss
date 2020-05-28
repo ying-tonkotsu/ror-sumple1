@@ -109,6 +109,7 @@ input, button, textarea, select,a {
             font-size: 14px;
             text-align: center;
             color: #fff;
+            width: 80px;
             }
             .top-contents a:hover{
                 color: #efefef;
@@ -139,6 +140,7 @@ h3{
 // logo
 .headlogo{
     padding: 10px;
+    position: absolute;
     }
     .headlogo a{
         font-size:24px;
@@ -146,7 +148,7 @@ h3{
         text-align: left;
         }
 #aboutpage .about-contents{
-    padding-top:50px;
+    padding-top:100px;
     width: 100vw;
     text-align:center;
 }
