@@ -13,4 +13,7 @@ class PostsController < ApplicationController
   # 新規作成ページ
   def new
   end
+  # 新規投稿を作成
+  def create
+  end
 end
