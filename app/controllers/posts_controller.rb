@@ -6,6 +6,6 @@ class PostsController < ApplicationController
     # idはDB内でparamsという変数のハッシュ値となっている
     @id = params[:id]
     # idカラムがparams[:id]dである投稿データを代入
-    @posts = Post.find_by(id:params[:id])
+    @post = Post.find_by(id:params[:id])
   end
 end
