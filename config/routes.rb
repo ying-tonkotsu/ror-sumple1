@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  get 'posts/index'
+# ホーム
   get '/' => "home#top"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# アバウトページ
   get 'about' => "home#about"
+# 投稿関係
+# 投稿一覧
+  get 'posts/index'
+# 投稿詳細(URLにIDカラムを含める)
+  get 'posts/:id' => "posts#show"
 end
