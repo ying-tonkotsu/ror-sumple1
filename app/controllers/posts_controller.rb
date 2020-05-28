@@ -15,7 +15,12 @@ class PostsController < ApplicationController
   end
   # 新規投稿を作成
   def create
+    #Postインスタンスを作成
+    @post = Post.new(content:params[:content])
+    # 内容をDBに保存
+    @post.save
     # indexページへ転送
     redirect_to("/posts/index")
+
   end
 end

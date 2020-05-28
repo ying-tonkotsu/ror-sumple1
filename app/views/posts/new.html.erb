@@ -5,7 +5,8 @@
         <%= form_tag("/posts/create") do %>
             <div class="form">
                 <div class="form-body">
-                <textarea></textarea>
+                <%# name属性の値をキーとしたハッシュを送信する %>
+                <textarea name="content"></textarea>
                 <input type="submit" value="投稿">
                 </div>
             </div>
