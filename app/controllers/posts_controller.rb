@@ -37,4 +37,13 @@ class PostsController < ApplicationController
     # indexページに転送
     redirect_to("/posts/index")
   end
+  # 投稿を削除
+  def destroy
+    # URLからIdを取得
+    @post = Post.find_by(id:params[:id])
+    # DBから削除
+    @post.destroy
+    # indec¥xページに転送
+    redirect_to("/posts/index")
+  end
 end

@@ -9,7 +9,11 @@
         <%= @post.created_at%>
       </div>
       <div class="post-menus">
-        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+        <%= link_to("edit", "/posts/#{@post.id}/edit") %>
+      </div>
+      <div class="post-menus">
+      <%# postへのlink_toを書く場合、{method:"post"}が必要 %>
+        <%= link_to("delete", "/posts/#{@post.id}/destroy",{method:"post"}) %>
       </div>
     </div>
   </div>

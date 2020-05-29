@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+#get : DBを変更しないアクション
+#post: DBを変更するアクション
+
 
 # 投稿関係
 # 投稿一覧
@@ -14,6 +17,9 @@ Rails.application.routes.draw do
   get 'posts/:id/edit' => "posts#edit"
 # 編集した投稿を更新
   post 'posts/:id/update' =>'posts#update'
+# 投稿の削除
+  post 'posts/:id/destroy' => 'posts#destroy'
+
 
 # ホーム
   get '/' => "home#top"
