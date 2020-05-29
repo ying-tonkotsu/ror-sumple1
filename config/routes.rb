@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-# ホーム
-  get '/' => "home#top"
-# アバウトページ
-  get 'about' => "home#about"
+
 # 投稿関係
 # 投稿一覧
   get 'posts/index'
@@ -13,4 +10,14 @@ Rails.application.routes.draw do
   get 'posts/:id' => "posts#show"
   # Createアクション
   post 'posts/create' => "posts#create"
+# 投稿の編集
+  get 'posts/:id/edit' => "posts#edit"
+# 編集した投稿を更新
+  post 'posts/:id/update' =>'posts#update'
+
+# ホーム
+  get '/' => "home#top"
+# アバウトページ
+  get 'about' => "home#about"
+
 end
