@@ -13,6 +13,13 @@
       <div class="headlogo">
         <a href="/">Sumple</a>
     </div>
+    <%# 通知を表示する %>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%# 通知 %>
     <%= yield %>
   </body>
 </html>

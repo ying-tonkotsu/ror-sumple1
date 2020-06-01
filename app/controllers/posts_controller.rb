@@ -40,6 +40,8 @@ class PostsController < ApplicationController
     @post.content = params[:content]
     # バリデーションに引っかからず内容をDBに保存できたら
     if @post.save
+    # フラッシュを表示する
+    flash[:notice] = "post edited"
     # indexページに転送する
       redirect_to("/posts/index")
     # バリデーションに引っかかったりで保存できなければ
@@ -49,6 +51,7 @@ class PostsController < ApplicationController
       #renderメソッドを使うとredirect_toメソッドを使った場合と違い、そのアクション内で定義した@変数をビューでそのまま使うことができる
       render("posts/edit")
     end
+
   end
 
   # 投稿を削除
