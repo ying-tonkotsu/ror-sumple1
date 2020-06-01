@@ -15,16 +15,23 @@ class PostsController < ApplicationController
 
   # 新規作成ページ
   def new
+    # Postインスタンスを追加しバリデーションを有効にする
+    @post = Post.new
   end
 
-  # 新規投稿を作成
+    # 新規投稿を作成
   def create
     #Postインスタンスを作成
-    @post = Post.new(content:params[:content])
+    @post = Post.new(content: params[:content])
     # 内容をDBに保存
-    @post.save
-    # indexページへ転送
-    redirect_to("/posts/index")
+    if @post.save
+     # 保存できたら、通知をつけてindexページへ転送
+      flash[:notice] = "post created"
+      redirect_to("/posts/index")
+    else
+      # バリデーションエラーにひっかかった場合、newアクションを介さない（入力内容を保持）
+      render("posts/new.html.erb")
+    end
   end
 
   # 投稿編集ページ
@@ -60,7 +67,9 @@ class PostsController < ApplicationController
     @post = Post.find_by(id:params[:id])
     # DBから削除
     @post.destroy
-    # indec¥xページに転送
+    # 通知を表示
+    flash[:notice] = "post deleted"
+    # indexページに転送
     redirect_to("/posts/index")
   end
 
