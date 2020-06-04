@@ -6,7 +6,7 @@
       <% @user.errors.full_messages.each do |message| %>
         <p class="error">！<%= message %></p>
       <% end %>
-      <%= form_tag("/users/#{@user.id}/update",{mulchpart: true}) do%>
+      <%= form_tag("/users/#{@user.id}/update",{multipart: true}) do%>
         <ul class="flex">
             <li>
                 <p>user name</p>
