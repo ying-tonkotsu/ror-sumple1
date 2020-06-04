@@ -23,7 +23,6 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name],
       email: params[:email],
-    # デフォルト画像を指定
       image_name: "default_image_name.png"
     )
 
