@@ -49,6 +49,17 @@ class UsersController < ApplicationController
     # 入力されたデータを格納
     @user.name = params[:name]
     @user.email = params[:email]
+
+    # 画像が入力されていたら
+    if params[:image]
+      # ファイル名をユーザーIDに指定
+     @user.image_name = "#{@user.id}.jpg"
+      #入力されたファイルを格納
+      image = params[:image]
+      # public/user_imagesフォルダに画像データを格納
+     File.binwrite("public/user_images/#{@user.image_name}",image.read)
+    end
+
     # データを更新
     if @user.save
       #保存できたら、サクセスメッセージを表示してユーザー詳細ページへ転送
