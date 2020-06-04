@@ -6,7 +6,7 @@
       <% @user.errors.full_messages.each do |message| %>
         <p class="error">！<%= message %></p>
       <% end %>
-      <%= form_tag("/users/#{@user.id}/update") do%>
+      <%= form_tag("/users/#{@user.id}/update",{mulchpart: true}) do%>
         <ul class="flex">
             <li>
                 <p>user name</p>
@@ -21,6 +21,14 @@
             </li>
             <li>
                 <input name="email" value="<%= @user.email%>">
+            </li>
+        </ul>
+        <ul class="flex">
+            <li>
+                <p>profile image</p>
+            </li>
+            <li>
+                <input name="image" type="file">
             </li>
         </ul>
         <input type="submit" value="done" class="join">
