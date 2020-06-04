@@ -20,7 +20,13 @@ class UsersController < ApplicationController
   # 新規アカウント情報を保存
   def create
     # 入力されたデータを取得
-    @user = User.new(id: params[:id], name: params[:name], email: params[:email])
+    @user = User.new(
+      name: params[:name],
+      email: params[:email],
+    # デフォルト画像を指定
+      image_name: "default_image_name.png"
+    )
+
     # 入力されたデータが保存できたら
     if @user.save
       # サクセスメッセージを追加して詳細ページへ転送
