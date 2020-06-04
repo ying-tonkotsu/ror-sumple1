@@ -11,11 +11,13 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
   end
 
+  # アカウント作成ページ
   def new
     # インスタンスを格納
     @user = User.new
   end
 
+  # 新規アカウント情報を保存
   def create
     # 入力されたデータを取得
     @user = User.new(id: params[:id], name: params[:name], email: params[:email])
@@ -28,4 +30,12 @@ class UsersController < ApplicationController
       render("users/new.html.erb")
     end
   end
+
+  # アカウント情報の編集
+  def edit
+    # URLからIDを取得
+    @user = User.find_by(id: params[:id])
+  end
+
+
 end

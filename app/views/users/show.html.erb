@@ -6,5 +6,6 @@
     <%# メールアドレス %>
       <p><%= @user.email %></p>
     </div>
+    <%= link_to("edit","/users/#{@user.id}/edit")%>
   </div>
 </div>

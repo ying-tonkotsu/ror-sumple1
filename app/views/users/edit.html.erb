@@ -1,0 +1,26 @@
+<div class="main users-edit">
+  <div class="container">
+    <h4 class="form-heading">edit account</h4>
+    <div class="form users-form">
+      <div class="form-body center">
+        <ul class="flex">
+            <li>
+                <p>user name</p>
+            </li>
+            <li>
+                <input name="name" value="<%= @user.name%>">
+            </li>
+        </ul>
+        <ul class="flex">
+            <li>
+                <p>email</p>
+            </li>
+            <li>
+                <input name="email" value="<%= @user.email%>">
+            </li>
+        </ul>
+        <input type="submit" value="done" class="join">
+      </div>
+    </div>
+  </div>
+</div>
