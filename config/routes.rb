@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/index'
 #get : DBを変更しないアクション
 #post: DBを変更するアクション
 
