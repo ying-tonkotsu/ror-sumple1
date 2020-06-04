@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'users/index'
 #get : DBを変更しないアクション
 #post: DBを変更するアクション
 
+# ユーザー関係
+# ユーザー一覧
+ get 'users/index'
 
 # 投稿関係
 # 投稿一覧
