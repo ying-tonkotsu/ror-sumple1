@@ -13,6 +13,9 @@ Rails.application.routes.draw do
  get 'users/:id' => "users#show"
 #アカウント情報の編集画面
  get 'users/:id/edit' => 'users#edit'
+# アカウント情報の更新
+ post 'users/:id/update/' => 'users#update'
+
 
 # 投稿関係
 # 投稿一覧

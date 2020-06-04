@@ -30,7 +30,7 @@ class PostsController < ApplicationController
       redirect_to("/posts/index")
     else
       # バリデーションエラーにひっかかった場合、newアクションを介さない（入力内容を保持）
-      render("posts/new.html.erb")
+      render("posts/new")
     end
   end
 
