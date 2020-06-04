@@ -22,3 +22,8 @@
   margin: 0 auto;
   justify-content: center;
 }
+.error{
+    color: #ff0000;
+    padding: 10px 0;
+    font-size: 14px;
+}

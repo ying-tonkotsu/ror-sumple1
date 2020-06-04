@@ -4,6 +4,10 @@
     <h4>Sign up</h4></div>
     <div class="form users-form">
       <div class="form-body center">
+      <%= form_tag("/users/create") do%>
+      <% @user.errors.full_messages.each do |message| %>
+        <p class="error">！<%= message %></p>
+      <% end %>
         <ul class="flex">
             <li>
                 <p>user name</p>
@@ -21,6 +25,7 @@
             </li>
         </ul>
         <input type="submit" value="join" class="join">
+      <% end%>
       </div>
     </div>
   </div>
