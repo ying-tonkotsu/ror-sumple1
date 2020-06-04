@@ -13,7 +13,7 @@
                 <p>user name</p>
             </li>
             <li>
-                <input name="name"></input>
+                <input name="name" value="<%= @user.name%>">
             </li>
         </ul>
         <ul class="flex">
@@ -21,7 +21,7 @@
                 <p>email</p>
             </li>
             <li>
-                <input name="email"></input>
+                <input name="email" value="<%= @user.email%>">
             </li>
         </ul>
         <input type="submit" value="join" class="join">
