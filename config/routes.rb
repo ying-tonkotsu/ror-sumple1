@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 # ユーザー関係
 # ユーザー一覧
  get 'users/index'
+# ユーザー詳細
+ get 'users/:id' => "users#show"
+
 
 # 投稿関係
 # 投稿一覧
