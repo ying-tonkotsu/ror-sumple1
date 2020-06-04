@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 #post: DBを変更するアクション
 
 # ユーザー関係
+# 新規登録
+ get 'signup' => 'users#new'
 # ユーザー一覧
  get 'users/index'
 # ユーザー詳細

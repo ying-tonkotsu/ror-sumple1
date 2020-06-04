@@ -1,4 +1,6 @@
 /* users/index ================================ */
+
+
 .users-heading {
   margin-bottom:15px;
 }
@@ -22,6 +24,7 @@
 .users-index-item a{
   padding: 20px 30px;
   display: block;
+  width: 100%;
 }
 
 .user-left img {
@@ -120,6 +123,32 @@
 }
 
 /* users/new, users/edit ================================ */
+.users-form .form-body{
+  padding: 40px 0;
+}
 .users-form input {
   margin-bottom: 15px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  border: #ccc solid 1px;
+  width: 100%;
+  min-width: 300px;
+}
+.users-form .flex li{
+  display: flex;
+  align-items: center;
+}
+.users-form .flex p{
+  min-width: 150px;
+  margin-bottom: 15px;
+}
+// 登録ボタン
+.users-form input.join{
+  margin:50px auto 0;
+  width: 300px;
+  background-color: skyblue;
+  color: #fff;
+  border: none;
+  font-size: 16px;
 }

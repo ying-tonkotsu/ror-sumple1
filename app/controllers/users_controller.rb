@@ -10,4 +10,8 @@ class UsersController < ApplicationController
     # idを特定
     @user = User.find_by(id: params[:id])
   end
+
+  def new
+    @user = User.new
+  end
 end
