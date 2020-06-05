@@ -76,4 +76,8 @@ class UsersController < ApplicationController
 
   end
 
+  # ログイン処理
+  def login
+
+  end
 end

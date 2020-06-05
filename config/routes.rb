@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
  # ログイン画面
  get 'login' => 'users#login_form'
+ #「get」と「post」では異なるルーティングとして扱われるので問題ない。
+ #ログインフォームからデータを送信
+ post 'login' => 'users#login'
 
  
 # 投稿関係
