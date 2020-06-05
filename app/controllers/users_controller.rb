@@ -71,4 +71,9 @@ class UsersController < ApplicationController
     end
   end
 
+  # ログイン画面
+  def login_form
+
+  end
+
 end

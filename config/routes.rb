@@ -16,7 +16,10 @@ Rails.application.routes.draw do
 # アカウント情報の更新
  post 'users/:id/update/' => 'users#update'
 
+ # ログイン画面
+ get 'login' => 'users#login_form'
 
+ 
 # 投稿関係
 # 投稿一覧
   get 'posts/index'
