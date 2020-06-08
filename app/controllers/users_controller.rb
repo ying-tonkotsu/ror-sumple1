@@ -23,13 +23,16 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name],
       email: params[:email],
+      password: params[:password],
       image_name: "default_image_name.png"
     )
 
     # 入力されたデータが保存できたら
     if @user.save
+      # 新規登録時にログイン状態にする
+      session[:user_id] = @user.id
       # サクセスメッセージを追加して詳細ページへ転送
-      flash[:notice] = "welcome!"
+      flash[:notice] = "Welcome! #{@user.name}"
       redirect_to("/users/#{@user.id}")
     else #保存できなかったらnewアクションを介さずに入力画面へ戻す
       render("users/new")

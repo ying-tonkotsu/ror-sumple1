@@ -54,8 +54,7 @@ class PostsController < ApplicationController
     # バリデーションに引っかかったりで保存できなければ
     else
     # 編集ページに転送（やり直しさせる）
-      # renderメソッドで（別のアクションを経由せずに）直前の投稿を表示させる
-      #renderメソッドを使うとredirect_toメソッドを使った場合と違い、そのアクション内で定義した@変数をビューでそのまま使うことができる
+      # renderメソッドで直前の投稿を表示させる
       render("posts/edit")
     end
 
