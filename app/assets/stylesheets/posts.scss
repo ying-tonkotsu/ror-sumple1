@@ -165,21 +165,3 @@
   transition: scale(1.04);
   transform: .8s;
 }
-// エラー文
-.posts-new .form-error{
-  color: #ff0000;
-  text-align: center;
-  padding:15px 0;
-  font-size: 14px;
-}
-// 通知
-.flash{
-  position: absolute;
-  width: 100%;
-  margin: 50px auto;
-  font-size: 16px;
-  text-align: center;
-  color: orange;
-  background-color: #fff;
-  padding: 5px;
-}

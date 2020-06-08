@@ -88,7 +88,12 @@ class UsersController < ApplicationController
       redirect_to("/posts/index")
     # ログイン失敗
     else
-      flash[:notice] = "Error"
+      # エラーメッセージ
+      @error_message = "！Wrong email address or password"
+      # 初期値
+      @email = params[:email]
+      @password = params[:password]
+      # やり直し
       render("users/login_form")
     end
   end
