@@ -80,8 +80,11 @@ class UsersController < ApplicationController
   def login
     # 入力された値と一致するものをfind_byで特定し代入（該当するユーザーを特定）
     @user = User.find_by(email: params[:email], password: params[:password])
+    
     # ログイン成功(@userが存在する)
     if @user
+      # 特定したユーザーのIDをブラウザに記憶させる(rpグインユーザーの情報を保持)
+      session[:user_id] = @user.id
       # サクセスメッセージ
       flash[:notice] = "Welcomeback,#{@user.name}!"
       # 投稿一覧へ転送
@@ -96,5 +99,6 @@ class UsersController < ApplicationController
       # やり直し
       render("users/login_form")
     end
+
   end
 end
