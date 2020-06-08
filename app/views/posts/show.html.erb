@@ -13,7 +13,7 @@
       </div>
       <div class="post-menus">
       <%# postへのlink_toを書く場合、{method:"post"}が必要 %>
-        <%= link_to("delete", "/posts/#{@post.id}/destroy",{method:"post"}) %>
+        <%= link_to("delete", "/posts/#{@post.id}/destroy",{method: :post}) %>
       </div>
     </div>
   </div>

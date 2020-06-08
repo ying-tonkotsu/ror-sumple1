@@ -3,11 +3,16 @@
         <h1>Sumple</h1>
         <h2>this is top page</h2>
         <div class="menu">
+        <%# ログイン状態によって表示内容を変更する %>
+        <% if session[:user_id] %>
+            <%= link_to("posts","/posts/index")%>
+            <%= link_to("users","/users/index") %>
+            <%= link_to("logout","/logout",{method: :post}) %>
+        <% else %>
             <%= link_to("about","/about") %>
-            <%= link_to("sns","/posts/index")%>
-            <%= link_to("user","/users/index") %>
-            <%= link_to("signup","/signup") %>
             <%= link_to("login","/login") %>
+            <%= link_to("signup","/signup") %>
+        <% end %>
         </div>
     </div>
 </div>

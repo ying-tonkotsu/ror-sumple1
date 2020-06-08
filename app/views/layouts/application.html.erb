@@ -13,8 +13,10 @@
       <div class="headlogo">
         <a href="/">Sumple</a>
         <%# ログイン中のユーザーIDを表示 %>
-        <p class="session">ID： <%= session[:user_id] %>
-        </p>
+        <% if session[:user_id] %>
+          <p class="session">ID： <%= session[:user_id] %>
+          </p>
+        <% end %>
     </div>
     <%# 通知を表示する %>
     <% if flash[:notice] %>
