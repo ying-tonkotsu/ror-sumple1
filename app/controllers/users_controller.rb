@@ -78,6 +78,18 @@ class UsersController < ApplicationController
 
   # ログイン処理
   def login
-
+    # 入力された値と一致するものをfind_byで特定し代入（該当するユーザーを特定）
+    @user = User.find_by(email: params[:email], password: params[:password])
+    # ログイン成功(@userが存在する)
+    if @user
+      # サクセスメッセージ
+      flash[:notice] = "Welcomeback,#{@user.name}!"
+      # 投稿一覧へ転送
+      redirect_to("/posts/index")
+    # ログイン失敗
+    else
+      flash[:notice] = "Error"
+      render("users/login_form")
+    end
   end
 end
