@@ -13,10 +13,9 @@
       <div class="headlogo">
         <a href="/">Sumple</a>
         <%# ログイン中のユーザーIDを表示 %>
-        <% current_user = User.find_by(id: session[:user_id]) %>
-        <% if current_user %>
+        <% if @current_user %>
           <p class="session">
-          <%= link_to(current_user.name,"/users/#{current_user.id}") %>
+          <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
           </p>
         <% end %>
     </div>
