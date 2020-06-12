@@ -4,7 +4,7 @@
         <h2>this is top page</h2>
         <div class="menu">
         <%# ログイン状態によって表示内容を変更する %>
-        <% if session[:user_id] %>
+        <% if @current_user %>
             <%= link_to("posts","/posts/index")%>
             <%= link_to("users","/users/index") %>
             <%= link_to("logout","/logout",{method: :post}) %>

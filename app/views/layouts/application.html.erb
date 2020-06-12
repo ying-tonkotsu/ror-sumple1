@@ -13,9 +13,8 @@
       <div class="headlogo">
         <a href="/">Sumple</a>
         <%# ログイン中のユーザーIDを表示 %>
-        <% if session[:user_id] %>
-          <p class="session">ID： <%= session[:user_id] %>
-          </p>
+        <% if @current_user %>
+           <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
         <% end %>
     </div>
     <%# 通知を表示する %>
