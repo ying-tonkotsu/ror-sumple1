@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sumple1</title>
+    <title>Sumple</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,7 +14,9 @@
         <a href="/">Sumple</a>
         <%# ログイン中のユーザーIDを表示 %>
         <% if @current_user %>
-           <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+          <p class="session">
+          <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
+          </p>
         <% end %>
     </div>
     <%# 通知を表示する %>
