@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
+  # ログインしていないユーザー（ゲスト）
   before_action :authenticate_user,{only:[:index,:show,:edit,:update]}
+  # ログイン済みのユーザーへの制限
   before_action :forbid_login_user, {only: [:new, :create, :login_form, :login]}
+  # ユーザー権限
+  before_action :ensure_correct_user, {only: [:edit, :update]}
+
   # ユーザー一覧ページ
   def index
     # ユーザーデータを全件取得
@@ -115,5 +120,16 @@ class UsersController < ApplicationController
     # ログインページへ転送
     redirect_to("/login")
   end
+
+  # ユーザー権限
+# URLで編集したいユーザーIDを叩かれた時の処理
+  def ensure_correct_user
+    # to_iで入力された（編集したいユーザーの）IDを文字列から数値に変換
+    if @current_user.id != params[:id].to_i
+      flash[:notice] = "ユーザー権限がありません"
+      redirect_to("/users/index")
+    end
+  end
+
 
 end
