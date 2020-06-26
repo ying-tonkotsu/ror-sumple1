@@ -8,6 +8,6 @@ class Post < ApplicationRecord
 
 # インスタンスメソッドuserを定義
   def user
-    return user = User.find_by(id: self.user_id)
+    return User.find_by(id: self.user_id)
   end
 end
