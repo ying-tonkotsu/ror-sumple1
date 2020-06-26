@@ -122,7 +122,7 @@ class UsersController < ApplicationController
   end
 
   # ユーザー権限
-# URLで編集したいユーザーIDを叩かれた時の処理
+# 編集したいユーザーIDのURLを叩かれた時の処理
   def ensure_correct_user
     # to_iで入力された（編集したいユーザーの）IDを文字列から数値に変換
     if @current_user.id != params[:id].to_i
