@@ -58,9 +58,13 @@
   box-shadow: 0 2px 6px #c1ced7;
   object-fit: cover;
 }
-
+.post-user-name{
+  padding: 15px;
+}
 .post-user-name a {
   font-weight: 600;
+  // align-items: center;
+  padding:15px;
 }
 
 .post-user-name a:hover {
@@ -164,4 +168,9 @@
 .posts-new input:hover{
   transition: scale(1.04);
   transform: .8s;
+}
+.profile{
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
 }
