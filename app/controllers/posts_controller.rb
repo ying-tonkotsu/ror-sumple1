@@ -24,7 +24,10 @@ class PostsController < ApplicationController
     # 新規投稿を作成
   def create
     #Postインスタンスを作成
-    @post = Post.new(content: params[:content])
+    @post = Post.new(
+      content: params[:content],
+      user_id: @current_user.id
+    )
     # 内容をDBに保存
     if @post.save
      # 保存できたら、通知をつけてindexページへ転送
