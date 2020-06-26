@@ -13,6 +13,8 @@ class PostsController < ApplicationController
   def show
     # idカラムがparams[:id]dである投稿データを代入
     @post = Post.find_by(id:params[:id])
+    # ユーザー情報をPostsテーブル内のuser_idカラムから特定
+    @user = User.find_by(id: @post.user_id)
   end
 
   # 新規作成ページ
