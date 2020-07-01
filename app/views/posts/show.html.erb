@@ -13,12 +13,15 @@
       <div class="post-time">
         <%= @post.created_at%>
       </div>
-      <div class="post-menus">
-        <%= link_to("edit", "/posts/#{@post.id}/edit") %>
-      </div>
-      <div class="post-menus">
-      <%# postへのlink_toを書く場合、{method:"post"}が必要 %>
-        <%= link_to("delete", "/posts/#{@post.id}/destroy",{method: :post}) %>
+      <%# ログインユーザーと投稿者が一致している場合のみ表示 %>
+      <% if @post.user_id == @current_user.id %>
+        <div class="post-menus">
+          <%= link_to("edit", "/posts/#{@post.id}/edit") %>
+        </div>
+        <div class="post-menus">
+        <%# postへのlink_toを書く場合、{method:"post"}が必要 %>
+          <%= link_to("delete", "/posts/#{@post.id}/destroy",{method: :post}) %>
+      <% end %>
       </div>
     </div>
   </div>
