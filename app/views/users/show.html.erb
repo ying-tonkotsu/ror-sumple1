@@ -13,4 +13,17 @@
       <%= link_to("edit","/users/#{@user.id}/edit")%>
     <% end %>
   </div>
+    <div class="container">
+  <% @user.posts.each do |post| %>
+    <div class="posts-index-item">
+          <div class="post-user-name flex">
+            <img class="profile" src="<%= "/user_images/#{post.user.image_name}" %>">
+            <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+          </div>
+          <div class="post-right">
+            <%= link_to(post.content , "/posts/#{post.id}")%>
+          </div>
+        </div>
+  <% end %>
+    </div>
 </div>
