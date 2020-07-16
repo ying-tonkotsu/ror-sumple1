@@ -45,8 +45,10 @@ Rails.application.routes.draw do
   post 'posts/:id/destroy' => 'posts#destroy'
 
 
-#いいね！機能
+# いいね！機能
   post 'likes/:post_id/create' => 'likes#create'
+# いいね！を取り消す
+  post 'likes/:post_id/destroy' => 'likes#destroy'
 
 # ホーム
   get '/' => "home#top"
