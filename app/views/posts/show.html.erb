@@ -13,6 +13,13 @@
       <div class="post-time">
         <%= @post.created_at%>
       </div>
+      <!-- ログイン中のユーザーが投稿にいいねしているデータがあるか -->
+      <% if Like.find_by(user_id:@current_user.id,post_id:@post.id) %>
+      いいね！済み
+      <% else %>
+      いいね！していません
+      <% end %>
+      <!-- ログイン中のユーザーが投稿にいいねしているデータがあるか -->
       <%# ログインユーザーと投稿者が一致している場合のみ表示 %>
       <% if @post.user_id == @current_user.id %>
         <div class="post-menus">
