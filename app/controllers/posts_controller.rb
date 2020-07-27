@@ -17,6 +17,8 @@ class PostsController < ApplicationController
     # ユーザー情報をPostsテーブル内のuser_idカラムから特定
     # インスタンスメゾットからユーザー情報を戻す
     @user = @post.user
+    # いいね数を表示する変数@likes_countを定義
+    @likes_count = Like.where(post_id:@post.id).count
   end
 
   # 新規作成ページ
