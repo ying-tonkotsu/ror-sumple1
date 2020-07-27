@@ -16,10 +16,14 @@
       <!-- ログイン中のユーザーが投稿にいいねしているデータがあるか -->
       <% if Like.find_by(user_id:@current_user.id,post_id:@post.id) %>
       <%# いいね！済みの状態だったら、いいね！取り消しへのリンクに %>
-        <%= link_to("いいね！済み", "/likes/#{@post.id}/destroy",{method: "post"}) %>
+        <%= link_to("/likes/#{@post.id}/destroy",{method: "post"}) do %>
+          <i class="fas fa-heart unlike-btn"></i>
+        <% end %>
       <% else %>
         <%# いいね！していない状態だったら、いいね！へのリンクに %>
-        <%= link_to("いいね！", "/likes/#{@post.id}/create",{method: "post"}) %>
+        <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
+          <i class="fas fa-heart like-btn"></i>
+        <% end %>
       <% end %>
       <!-- ログイン中のユーザーが投稿にいいねしているデータがあるか -->
       <%# ログインユーザーと投稿者が一致している場合のみ表示 %>

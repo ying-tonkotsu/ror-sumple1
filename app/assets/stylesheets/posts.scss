@@ -174,3 +174,16 @@
   height: 50px;
   border-radius: 30px;
 }
+// いいね！枠
+.posts-show-item .fas {
+  font-size: 26px;
+  margin-right: 3px;
+}
+// いいね！済みボタン
+.unlike-btn{
+  color: #ff3866;
+}
+// 未いいね！
+.like-btn{
+  color: #888;
+}
